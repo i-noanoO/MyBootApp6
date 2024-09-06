@@ -1,19 +1,21 @@
-package jp.te4a.spring.boot.myapp8.mybootapp8;
+package jp.te4a.spring.boot.myapp9.mybootapp9;
 
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;*/
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+//import org.springframework.stereotype.Service;
+
 
 @Repository
-public class BookRepository{
+public interface BookRepository extends JpaRepository<BookBean,Integer>{
 
-    private final ConcurrentMap<Integer,BookBean> bookMap = new ConcurrentHashMap<>();
+    /*private final ConcurrentMap<Integer,BookBean> bookMap = new ConcurrentHashMap<>();
     private int BOOK_ID = 1;
     public int getBookId(){
         return BOOK_ID++;
@@ -38,6 +40,6 @@ public class BookRepository{
 
     public BookBean findOne(Integer id){
             return bookMap.get(id);
-    }
+    }*/
 }
 
